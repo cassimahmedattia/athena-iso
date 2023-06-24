@@ -21,3 +21,5 @@ We may update this Privacy Policy from time to time by posting a new version on 
 
 ## Contact Us
 If you have any questions or concerns about this Privacy Policy or our operating system's privacy practices, please contact us at keeper@athenaos.org.
+
+## Everything is Open source in Athena. Don't worry....You are saft with us.
