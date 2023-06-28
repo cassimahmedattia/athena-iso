@@ -124,7 +124,7 @@ If you like it, please [support Athena OS](https://github.com/sponsors/Athena-OS
 
 **Athena Polias** will provide:
 * **Blue Team** circular menu!
-* New hacking roles: **Blue Teamer** and **DoS Attacker**
+* New hacking roles: **Blue Teamer** and **DoS Tester**
 * **10 terminals** to be chosen during the installation of Athena
 * **CyberChef** as APPLICATION! If you need to decode or encode what you wish, you don't need to use the browser for connecting to CyberChef. Athena gives you CyberChef as application! Give a look on the menu dock!
 * Automatic install of the right drivers for your PC. Now Athena can recognize your **GPU** and install the right drivers with no user interaction
