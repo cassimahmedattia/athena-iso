@@ -61,6 +61,7 @@ wireless_tools
 wireplumber
 wpa_supplicant
 xdg-user-dirs
+xfsprogs
 zram-generator
 
 #######################################################
