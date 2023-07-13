@@ -222,4 +222,5 @@ open-vm-tools
 xf86-video-vmware
 qemu-guest-agent
 virtualbox-guest-utils
+hyperv
 xf86-input-vmmouse
