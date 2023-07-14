@@ -83,6 +83,7 @@ Dedicating my spare time to Athena OS in order to keep it stable, updated, flawl
 <br>
 <h2 align="center">🥇 Gold Sponsors 🥇</h2>
 <p align="center">
+  <a href='https://github.com/shard77'>@shard77</a><br>
   <a href='https://github.com/Apok01'>@Apok01</a><br>
 </p>
 <br>
