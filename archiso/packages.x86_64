@@ -7,6 +7,7 @@
 accountsservice
 alsa-utils
 amd-ucode
+arch-install-scripts
 base
 base-devel
 broadcom-wl-dkms
