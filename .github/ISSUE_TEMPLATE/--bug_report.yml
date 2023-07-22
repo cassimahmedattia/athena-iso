@@ -20,13 +20,19 @@ body:
 
 - type: checkboxes
   attributes:
-    label: Are you using baremetal or virtual machine?
+    label: Which environment or technology are you using?
     description: |
-      Tell us whether the issue is on baremetal or virtual machine. 
+      Tell us which environment the issue is affecting. 
     options:
       - label: "Baremetal"
       - label: "VirtualBox Virtual Machine"
       - label: "VMware Virtual Machine"
+      - label: "Hyper-V Virtual Machine"
+      - label: "QEMU/KVM"
+      - label: "Parallels"
+      - label: "UTM"
+      - label: "Container"
+      - label: "WSL"
 
 - type: input
   attributes:
