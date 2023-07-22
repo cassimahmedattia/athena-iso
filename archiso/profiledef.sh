@@ -3,7 +3,7 @@
 
 iso_name="athena"
 iso_label="ATHENA-OS"
-iso_publisher="Athena <https://github.com/Athena-OS>"
+iso_publisher="Athena <https://www.athenaos.org>"
 iso_application="Athena Live/Rescue CD"
 iso_version="2023.07.08-dev"
 install_dir="arch"
