@@ -36,7 +36,7 @@ body:
 
 - type: input
   attributes:
-    label: Kernel Version
+    label: Kernel version
     description: |
       Please tell us what version of the Linux kernel you are using, or if you are using a custom kernel. 
       You can run `uname -r` if that command is available to you, or by running `cat /proc/version`.
@@ -46,7 +46,7 @@ body:
 
 - type: textarea
   attributes:
-    label: Other Software
+    label: Other software
     description: If you're reporting a bug involving Athena OS interaction with other applications, please tell us. What applications? What versions?
     placeholder: |
       docker, version 3.2.2
@@ -58,7 +58,7 @@ body:
 
 - type: textarea
   attributes:
-    label: Repro Steps
+    label: Repro steps
     description: Please list out the steps to reproduce your bug.  
     placeholder: Your steps go here. Include relevant environmental variables or any other configuration.
   validations:
@@ -66,7 +66,7 @@ body:
 
 - type: textarea
   attributes:
-    label: Expected Behavior
+    label: Expected behavior
     description: What were you expecting to see? Include any relevant examples or documentation links.
     placeholder: If you want to include screenshots, paste them into the text area or follow up with a separate comment. 
   validations:
@@ -74,7 +74,7 @@ body:
 
 - type: textarea
   attributes:
-    label: Actual Behavior
+    label: Actual behavior
     description: What happened instead?
     placeholder: Include the terminal output, straces of the failing command, etc. as necessary.
   validations:
@@ -82,7 +82,7 @@ body:
 
 - type: textarea
   attributes:
-    label: Diagnostic Logs
+    label: Diagnostic logs
     description: | 
       Please provide additional diagnostics if needed.
       You can run `probe` and `sudo journalctl | tb` to generate link with logs accessible online.
