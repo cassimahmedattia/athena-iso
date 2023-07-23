@@ -56,3 +56,12 @@ body:
       Detailed instructions.
   validations:
     required: false
+
+- type: textarea
+  attributes:
+    label: Screenshots
+    description: Show your rice.
+    placeholder: |
+      Paste your images or use ![Image Label](https://link-to-your-image)
+  validations:
+    required: false
