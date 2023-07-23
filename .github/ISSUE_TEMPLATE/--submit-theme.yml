@@ -53,9 +53,6 @@ body:
     label: Setting Instructions
     description: Report the instructions for setting the theme correctly.
     placeholder: |
-      docker, version 3.2.2
-      traceroute, Version: 1:2.0.21-1
-      codium 1.54.3 with Remote-WSL Extension 0.54.6
-      MyCustomApplication
+      Detailed instructions.
   validations:
     required: false
