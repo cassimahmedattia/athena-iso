@@ -48,6 +48,33 @@ body:
   validations:
     required: true
 
+- type: input
+  attributes:
+    label: Kitty Theme
+    description: |
+      Type the name of the Kitty Theme.
+    placeholder: "Kitty theme name"
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: VSCodium Theme
+    description: |
+      Type the name of the VSCodium Theme.
+    placeholder: "VSCodium theme name"
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: Tmux Theme
+    description: |
+      Type the name of the Tmux Theme.
+    placeholder: "Tmux theme name"
+  validations:
+    required: true
+
 - type: textarea
   attributes:
     label: Setting Instructions
