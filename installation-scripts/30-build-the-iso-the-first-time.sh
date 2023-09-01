@@ -29,12 +29,12 @@ echo
 	desktop="gnome"
 	dmDesktop="gnome"
 
-	athenaVersion='2023.07.30-dev'
+	athenaVersion='rolling'
 
 	isoLabel='athena-'$athenaVersion'-x86_64.iso'
 
 	# setting of the general parameters
-	archisoRequiredVersion="archiso 71-1"
+	archisoRequiredVersion="archiso 72-1"
 	buildFolder=$HOME"/athena-build"
 	outFolder=$HOME"/Athena-Out"
         # outFolder="/mnt/hgfs/VirtualShare/Athena-Out"
