@@ -28,7 +28,6 @@ jobs:
       - name: Build ArchISO
         run: |
           ./30-build-the-iso-the-first-time.sh
-#          mkdir -p $HOME/Athena-Out
           
 #      - name: Deploy to Dropbox
 #        uses: whalemare/action-dropbox@v1.0.0
