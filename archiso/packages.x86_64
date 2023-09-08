@@ -72,7 +72,7 @@ zram-generator
 #######################################################
 
 #bfetch dependencies
-exa
+eza
 
 #Hashcat for using CPU
 pocl
