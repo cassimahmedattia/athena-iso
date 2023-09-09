@@ -58,6 +58,7 @@ squashfs-tools
 sudo
 syslinux
 timelineproject-hg
+usbutils
 vi
 #vortex-athena
 wireless_tools
@@ -227,4 +228,4 @@ open-vm-tools
 xf86-video-vmware
 qemu-guest-agent
 virtualbox-guest-utils
-xf86-input-vmmouse
+#xf86-input-vmmouse
