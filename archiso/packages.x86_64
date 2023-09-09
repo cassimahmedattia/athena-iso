@@ -10,7 +10,7 @@ archlinux-keyring
 amd-ucode
 arch-install-scripts
 base
-base-devel
+#base-devel
 broadcom-wl-dkms
 dhcpcd
 dialog
