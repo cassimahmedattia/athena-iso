@@ -44,6 +44,7 @@ nohang
 nss-mdns
 ntfs-3g
 ntfsprogs
+ntp
 os-prober
 pacman-mirrorlist
 pavucontrol
