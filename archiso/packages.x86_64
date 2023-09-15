@@ -215,7 +215,7 @@ athena-vim-config
 athena-vscodium-themes
 athena-welcome
 figlet-fonts
-htb-tools
+htb-toolkit
 nist-feed
 
 #Commented LightDM dependencies are managed by Calamares Installer
