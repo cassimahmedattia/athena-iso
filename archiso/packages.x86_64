@@ -88,11 +88,10 @@ athena-gdm-config
 #######################################################
 ###                      FONTS                      ###
 #######################################################
-adobe-source-han-sans-cn-fonts
-adobe-source-han-sans-jp-fonts
-adobe-source-han-sans-kr-fonts
-gnu-free-fonts
+noto-fonts
+noto-fonts-cjk
 noto-fonts-emoji
+noto-fonts-extra
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
 
@@ -120,6 +119,7 @@ edex-ui-bin
 eog
 espeakup
 figlet
+figlet-fonts
 file-roller
 fortune-mod
 git
@@ -137,7 +137,6 @@ lib32-glibc
 lolcat
 lsd
 mtpfs
-myman
 nano-syntax-highlighting
 nautilus
 ncdu
@@ -214,7 +213,6 @@ athena-tmux-config
 athena-vim-config
 athena-vscodium-themes
 athena-welcome
-figlet-fonts
 htb-toolkit
 nist-feed
 
