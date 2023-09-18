@@ -27,6 +27,7 @@ jobs:
       - name: Remove problematic mirrors
         run: |
           sed -i "/arch.mirror.constant.com/d" /etc/pacman.d/mirrorlist
+          sed -i "/mirror.sfo12.us.leaseweb.net/d" /etc/pacman.d/mirrorlist
           
       - name: Install dependencies
         run: pacman -Syyu --noconfirm archiso git openssh rsync sshpass wget
