@@ -24,6 +24,9 @@ jobs:
           pacman -Syyu --noconfirm reflector
           reflector --age 6 --connection-timeout 15 --download-timeout 15 --latest 21 --fastest 21 --threads 21 --sort rate --protocol https --save /etc/pacman.d/mirrorlist
 
+      - name: Keyrings and Mirrorlists
+        run: pacman -Syy --noconfirm archlinux-keyring pacman-mirrorlist athena-keyring athena-mirrorlist blackarch-keyring blackarch-mirrorlist chaotic-keyring chaotic-mirrorlist
+
       - name: Install dependencies
         run: pacman -Syyu --noconfirm archiso git openssh rsync sshpass wget
           
