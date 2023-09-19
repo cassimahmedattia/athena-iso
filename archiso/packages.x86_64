@@ -157,9 +157,6 @@ sl
 ######## hw-probe deps ########
 #smartmontools
 ################################
-snap-pac
-snap-pac-grub
-snapper-support
 superbfetch-git
 textart
 tidy
