@@ -22,8 +22,8 @@ inetutils
 intel-ucode
 irqbalance
 linux-firmware
-linux-zen
-linux-zen-headers
+linux-lts
+linux-lts-headers
 lvm2
 man-db
 man-pages
