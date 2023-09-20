@@ -29,6 +29,7 @@ jobs:
           sed -i "/arch.mirror.constant.com/d" /etc/pacman.d/mirrorlist
           sed -i "/us.leaseweb.net/d" /etc/pacman.d/mirrorlist
           sed -i "/america.mirror.pkgbuild.com/d" /etc/pacman.d/mirrorlist
+          sed -i "/geo.mirror.pkgbuild.com/d" /etc/pacman.d/mirrorlist
           
       - name: Keyrings and Mirrorlists
         run: pacman -Syy --noconfirm archlinux-keyring pacman-mirrorlist athena-keyring athena-mirrorlist blackarch-keyring blackarch-mirrorlist chaotic-keyring chaotic-mirrorlist
