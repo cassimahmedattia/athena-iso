@@ -40,7 +40,7 @@ body:
     description: |
       Please tell us what version of the Linux kernel you are using, or if you are using a custom kernel. 
       You can run `uname -r` if that command is available to you, or by running `cat /proc/version`.
-    placeholder: "6.2.11-zen1-1-zen"
+    placeholder: "6.2.11-lts1-1-lts"
   validations:
     required: false
 
