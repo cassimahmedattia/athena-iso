@@ -189,6 +189,8 @@ blackarch-mirrorlist
 ###                ATHENA REPOSITORY                ###
 #######################################################
 
+aegis
+aegis-gui
 athena-blue-eyes-theme
 athena-calamares
 athena-calamares-config
