@@ -59,6 +59,7 @@ sof-firmware
 squashfs-tools
 sudo
 syslinux
+testdisk
 timelineproject-hg
 usbutils
 vi
