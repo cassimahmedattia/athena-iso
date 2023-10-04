@@ -2,8 +2,8 @@ name: Build ArchISO Beta
 on:
   # push:
   workflow_dispatch:
-  schedule:
-   - cron:  '0 0 */14 * *'
+#  schedule:
+#   - cron:  '0 0 */14 * *'
   
 jobs:
   build:
