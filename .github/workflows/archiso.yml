@@ -24,6 +24,18 @@ jobs:
           pacman -Syyu --noconfirm reflector
           reflector --age 6 --connection-timeout 15 --download-timeout 15 --latest 21 --fastest 21 --threads 21 --sort rate --protocol https --save /etc/pacman.d/mirrorlist
 
+      - name: Remove problematic mirrors
+        run: |
+          sed -i "/arch.mirror.constant.com/d" /etc/pacman.d/mirrorlist
+          sed -i "/us.leaseweb.net/d" /etc/pacman.d/mirrorlist
+          sed -i "/america.mirror.pkgbuild.com/d" /etc/pacman.d/mirrorlist
+          sed -i "/geo.mirror.pkgbuild.com/d" /etc/pacman.d/mirrorlist
+          sed -i "/london.mirror.pkgbuild.com/d" /etc/pacman.d/mirrorlist
+          sed -i "/geo-mirror.chaotic.cx/d" /etc/pacman.d/chaotic-mirrorlist
+          sed -i "/iad-us-mirror.silky.network/d" /etc/pacman.d/mirrorlist
+          sed -i "/archlinux.uk.mirror.allworldit.com/d" /etc/pacman.d/mirrorlist
+          sed -i "/mirror.lty.me/d" /etc/pacman.d/mirrorlist
+
       - name: Keyrings and Mirrorlists
         run: pacman -Syy --noconfirm archlinux-keyring pacman-mirrorlist athena-keyring athena-mirrorlist blackarch-keyring blackarch-mirrorlist chaotic-keyring chaotic-mirrorlist
 
