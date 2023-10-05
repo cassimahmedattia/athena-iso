@@ -176,7 +176,7 @@ echo "################################################################## "
 echo
 
 	echo "Deleting any files in /etc/skel"
-	rm -rf $buildFolder/archiso/airootfs/etc/skel/.* 2> /dev/null
+	rm -rf $buildFolder/archiso/airootfs/etc/skel/.bashrc 2> /dev/null
 	echo
 
 	echo "Getting the last version of bashrc in /etc/skel"
