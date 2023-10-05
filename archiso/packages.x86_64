@@ -4,14 +4,8 @@
 ###                  BASIC PACKAGES                 ###
 #######################################################
 
-accountsservice
-alsa-utils
-arch-install-scripts
-archlinux-keyring
-amd-ucode
 arch-install-scripts
 base
-#base-devel
 broadcom-wl-dkms
 dhcpcd
 dialog
@@ -20,38 +14,28 @@ edk2-shell
 efibootmgr
 grub
 inetutils
-intel-ucode
-irqbalance
 linux-firmware
 linux-lts
 linux-lts-headers
 lvm2
-man-db
-man-pages
-memtest86+
 mesa
 mesa-utils
 mkinitcpio-archiso
 mkinitcpio-nfs-utils
 mkinitcpio-openswap
-most
 mtools
-nbd
 net-tools
 netctl
 networkmanager
 nfs-utils
-nohang
 nss-mdns
 ntfs-3g
 ntfsprogs
 ntp
 os-prober
-pacman-mirrorlist
 pavucontrol
 pipewire
 pipewire-pulse
-profile-sync-daemon
 pv
 rsync
 rtl8821cu-morrownr-dkms-git
@@ -60,25 +44,12 @@ squashfs-tools
 sudo
 syslinux
 testdisk
-timelineproject-hg
 usbutils
 vi
-#vortex-athena
 wireless_tools
 wireplumber
 wpa_supplicant
 xfsprogs
-zram-generator
-
-#######################################################
-###                   DEPENDENCIES                  ###
-#######################################################
-
-#bfetch dependencies
-eza
-
-#Hashcat for using CPU
-pocl
 
 #######################################################
 ###                 DISPLAY MANAGERS                ###
@@ -90,9 +61,7 @@ athena-gdm-config
 ###                      FONTS                      ###
 #######################################################
 noto-fonts
-noto-fonts-cjk
 noto-fonts-emoji
-noto-fonts-extra
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
 
@@ -100,78 +69,23 @@ ttf-jetbrains-mono-nerd
 ###                    UTILITIES                    ###
 #######################################################
 
-ananicy
-armcord-git
-asciinema
-bashtop
 bat
-bc
-bless
-chatgpt-desktop-bin
-cmatrix
-cowsay
-cron
-cyberchef-electron
-#discord_arch_electron
-downgrade
-edex-ui-bin
 eog
 espeakup
-figlet
-figlet-fonts
-file-roller
-fortune-mod
 git
 gparted
 grub-customizer
-gtk-engine-murrine
-gvfs-gphoto2
-gvfs-mtp
-hexedit
-#hw-probe
-imagemagick
-jdk-openjdk
-jq
-lib32-glibc
-lolcat
 lsd
-mtpfs
-nano-syntax-highlighting
 nautilus
-ncdu
-networkmanager-openvpn
-nyancat
-octopi
-onionshare
-openbsd-netcat
-openvpn
 orca
-p7zip
 paru
-pfetch
 polkit
-python-pywhat
 reflector
-sl
-######## hw-probe deps ########
-#smartmontools
-################################
-superbfetch-git
-textart
-tidy
-tk
-toilet-fonts
-torbrowser-launcher
-tree
 ufw
-unzip
 vnstat
 wget
 which
 xclip
-xcp
-xmlstarlet
-zoxide
 
 #######################################################
 ###                   CHAOTIC AUR                   ###
@@ -191,30 +105,18 @@ blackarch-mirrorlist
 ###                ATHENA REPOSITORY                ###
 #######################################################
 
-aegis
 aegis-gui
 athena-blue-eyes-theme
-athena-calamares
-athena-calamares-config
-athena-cyber-hub
 athena-firefox-config
 athena-gnome-config
 athena-keyring
+athena-kitty-config
 athena-mirrorlist
 athena-neofetch-config
-athena-nvim-config
 athena-powershell-config
 athena-system-config
-athena-system-installation
-athena-theme-tweak
-athena-tmux-config
-athena-vim-config
 athena-vscodium-themes
 athena-welcome
-htb-toolkit
-nist-feed
-
-#Commented LightDM dependencies are managed by Calamares Installer
 
 #######################################################
 ###                 LIVE ENVIRONMENT                ###
@@ -225,4 +127,3 @@ open-vm-tools
 xf86-video-vmware
 qemu-guest-agent
 virtualbox-guest-utils
-#xf86-input-vmmouse
