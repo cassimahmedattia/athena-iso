@@ -26,6 +26,7 @@ mkinitcpio-archiso
 mkinitcpio-nfs-utils
 mkinitcpio-openswap
 mtools
+nano
 net-tools
 netctl
 networkmanager
