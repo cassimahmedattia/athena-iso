@@ -4,6 +4,7 @@
 ###                  BASIC PACKAGES                 ###
 #######################################################
 
+amd-ucode
 arch-install-scripts
 base
 broadcom-wl-dkms
@@ -14,6 +15,7 @@ edk2-shell
 efibootmgr
 grub
 inetutils
+intel-ucode
 linux-firmware
 linux-lts
 linux-lts-headers
