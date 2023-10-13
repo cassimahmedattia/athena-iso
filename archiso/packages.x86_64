@@ -111,7 +111,6 @@ blackarch-mirrorlist
 #######################################################
 
 aegis-gui
-athena-blue-eyes-theme
 athena-firefox-config
 athena-gnome-config
 athena-keyring
@@ -119,6 +118,7 @@ athena-kitty-config
 athena-mirrorlist
 athena-neofetch-config
 athena-powershell-config
+athena-samurai-theme
 athena-system-config
 athena-vscodium-themes
 athena-welcome
