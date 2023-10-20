@@ -8,6 +8,7 @@ amd-ucode
 arch-install-scripts
 base
 broadcom-wl-dkms
+btrfs-progs
 dhcpcd
 dialog
 dosfstools
@@ -53,12 +54,8 @@ wireless_tools
 wireplumber
 wpa_supplicant
 xfsprogs
-
-#######################################################
-###                 DISPLAY MANAGERS                ###
-#######################################################
-
-athena-gdm-config
+xorg-server
+xorg-xinit
 
 #######################################################
 ###                      FONTS                      ###
@@ -110,16 +107,16 @@ blackarch-mirrorlist
 
 aegis-gui
 athena-firefox-config
-athena-gnome-config
+athena-graphite-theme
 athena-keyring
 athena-kitty-config
 athena-mirrorlist
 athena-neofetch-config
 athena-powershell-config
-athena-samurai-theme
 athena-system-config
 athena-vscodium-themes
 athena-welcome
+athena-xfce-picom-config
 
 #######################################################
 ###                 LIVE ENVIRONMENT                ###

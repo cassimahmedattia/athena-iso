@@ -235,8 +235,7 @@ buffer_clean(){
   free -h && sudo sh -c 'echo 1 >  /proc/sys/vm/drop_caches' && free -h
 }
 
-# reporting tools - install when not installed and uncomment your favourite
-if [[ $1 != no-repeat-flag ]]; then
+if [[ $1 != no-repeat-flag && -z $NO_REPETITION ]]; then
   neofetch
 fi
 
