@@ -31,6 +31,7 @@ nano
 net-tools
 netctl
 networkmanager
+network-manager-applet
 nfs-utils
 nss-mdns
 ntfs-3g
@@ -108,6 +109,7 @@ blackarch-mirrorlist
 aegis-gui
 athena-firefox-config
 athena-graphite-theme
+athena-grub-theme
 athena-keyring
 athena-kitty-config
 athena-mirrorlist
