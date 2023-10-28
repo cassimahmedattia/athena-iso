@@ -107,10 +107,10 @@ blackarch-mirrorlist
 #######################################################
 
 aegis-gui
+athena-alacritty-config
 athena-firefox-config
 athena-graphite-theme
 athena-keyring
-athena-kitty-config
 athena-mirrorlist
 athena-neofetch-config
 athena-powershell-config
