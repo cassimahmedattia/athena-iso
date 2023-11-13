@@ -19,6 +19,14 @@ jobs:
       - name: Checkout files
         uses: actions/checkout@v3
 
+      - name: Keyrings and Mirrorlists
+        run: pacman -Syyu --noconfirm archlinux-keyring pacman-mirrorlist athena-keyring athena-mirrorlist blackarch-keyring blackarch-mirrorlist chaotic-keyring chaotic-mirrorlist rate-mirrors
+
+      - name: Set fastest mirrors
+        run: |
+          rate-mirrors --concurrency 40 --disable-comments --allow-root --save /etc/pacman.d/mirrorlist arch
+          rate-mirrors --concurrency 40 --disable-comments --allow-root --save /etc/pacman.d/chaotic-mirrorlist chaotic-aur
+
       - name: Upload to GitHub Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -31,14 +39,6 @@ jobs:
           for f in $(find $HOME/Athena-Out -name '*.iso*'); do
             gh release upload v23.06.23 $f
           done
-
-      - name: Keyrings and Mirrorlists
-        run: pacman -Syyu --noconfirm archlinux-keyring pacman-mirrorlist athena-keyring athena-mirrorlist blackarch-keyring blackarch-mirrorlist chaotic-keyring chaotic-mirrorlist rate-mirrors
-
-      - name: Set fastest mirrors
-        run: |
-          rate-mirrors --concurrency 40 --disable-comments --allow-root --save /etc/pacman.d/mirrorlist arch
-          rate-mirrors --concurrency 40 --disable-comments --allow-root --save /etc/pacman.d/chaotic-mirrorlist chaotic-aur
 
       - name: Remove problematic mirrors
         run: |
