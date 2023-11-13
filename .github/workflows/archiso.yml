@@ -23,6 +23,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          pacman -Syyu --noconfirm git github-cli
           cd $GITHUB_WORKSPACE
           echo "$(ls -la)"
           mkdir -p $HOME/Athena-Out
