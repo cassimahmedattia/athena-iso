@@ -27,21 +27,6 @@ jobs:
           rate-mirrors --concurrency 40 --disable-comments --allow-root --save /etc/pacman.d/mirrorlist arch
           rate-mirrors --concurrency 40 --disable-comments --allow-root --save /etc/pacman.d/chaotic-mirrorlist chaotic-aur
 
-      - name: Upload to GitHub Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          pacman -Syyu --noconfirm git github-cli
-          cd $GITHUB_WORKSPACE
-          git clone https://github.com/Athena-OS/athena-iso
-          cd athena-iso
-          echo "$(ls -la)"
-          mkdir -p $HOME/Athena-Out
-          touch $HOME/Athena-Out/hello.iso
-          for f in $(find $HOME/Athena-Out -name '*.iso*'); do
-            gh release upload v23.06.23 $f
-          done
-
       - name: Remove problematic mirrors
         run: |
           sed -i "/arch.mirror.constant.com/d" /etc/pacman.d/mirrorlist
@@ -79,6 +64,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd $GITHUB_WORKSPACE
+          git clone https://github.com/Athena-OS/athena-iso
+          cd athena-iso
           for f in $(find $HOME/Athena-Out -name '*.iso*'); do
             gh release upload v23.06.23 $f
           done
