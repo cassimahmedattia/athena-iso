@@ -33,6 +33,8 @@ jobs:
         run: |
           pacman -Syyu --noconfirm git github-cli
           cd $GITHUB_WORKSPACE
+          git clone https://github.com/Athena-OS/athena-iso
+          cd athena-iso
           echo "$(ls -la)"
           mkdir -p $HOME/Athena-Out
           touch $HOME/Athena-Out/hello.iso
