@@ -19,6 +19,18 @@ jobs:
       - name: Checkout files
         uses: actions/checkout@v3
 
+      - name: Upload to GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd $GITHUB_WORKSPACE
+          echo "$(ls -la)"
+          mkdir -p $HOME/Athena-Out
+          touch $HOME/Athena-Out/hello.iso
+          for f in $(find $HOME/Athena-Out -name '*.iso*'); do
+            gh release upload v23.06.23 $f
+          done
+
       - name: Keyrings and Mirrorlists
         run: pacman -Syyu --noconfirm archlinux-keyring pacman-mirrorlist athena-keyring athena-mirrorlist blackarch-keyring blackarch-mirrorlist chaotic-keyring chaotic-mirrorlist rate-mirrors
 
