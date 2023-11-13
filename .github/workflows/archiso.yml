@@ -26,6 +26,7 @@ jobs:
           echo "$(ls)"
           echo "$(ls $HOME)"
           echo "$(pwd)"
+          echo "$github_workspace"
 
       - name: Keyrings and Mirrorlists
         run: pacman -Syyu --noconfirm archlinux-keyring pacman-mirrorlist athena-keyring athena-mirrorlist blackarch-keyring blackarch-mirrorlist chaotic-keyring chaotic-mirrorlist rate-mirrors
