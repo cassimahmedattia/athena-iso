@@ -19,6 +19,14 @@ jobs:
       - name: Checkout files
         uses: actions/checkout@v3
 
+      - name: Upload to GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run:
+          for f in $(find $HOME/Athena-Out -name '*.iso*'); do
+            gh release upload v23.06.23 $f
+          done
+
       - name: Set fastest mirrors
         run: |
           pacman -Syyu --noconfirm reflector
