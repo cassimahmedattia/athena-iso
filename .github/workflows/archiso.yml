@@ -11,7 +11,7 @@ jobs:
       ATHENA_VERSION: 'rolling'
       ISO_VERSION: 'rolling' # It must be the same on profiledef.sh and installation_script
       ISO_ARCHITECTURE: 'x86_64'
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     container:
       image: athenaos/base-devel:latest
       options: --privileged 
@@ -19,10 +19,14 @@ jobs:
       - name: Checkout files
         uses: actions/checkout@v3
 
+      - name: Keyrings and Mirrorlists
+        run: pacman -Syyu --noconfirm archlinux-keyring pacman-mirrorlist athena-keyring athena-mirrorlist blackarch-keyring blackarch-mirrorlist chaotic-keyring chaotic-mirrorlist
+
       - name: Set fastest mirrors
         run: |
-          pacman -Syyu --noconfirm reflector
-          reflector --age 6 --connection-timeout 15 --download-timeout 15 --latest 21 --fastest 21 --threads 21 --sort rate --protocol https --save /etc/pacman.d/mirrorlist
+          pacman -Syyu --noconfirm rate-mirrors
+          rate-mirrors --concurrency 40 --disable-comments --allow-root --save /etc/pacman.d/mirrorlist arch
+          rate-mirrors --concurrency 40 --disable-comments --allow-root --save /etc/pacman.d/chaotic-mirrorlist chaotic-aur
 
       - name: Remove problematic mirrors
         run: |
@@ -43,12 +47,9 @@ jobs:
           sed -i "/europe.mirror.pkgbuild.com/d" /etc/pacman.d/mirrorlist
           sed -i "/mirror.sunred.org/d" /etc/pacman.d/mirrorlist
           sed -i "/mirror.netcologne.de/d" /etc/pacman.d/mirrorlist
-          
-      - name: Keyrings and Mirrorlists
-        run: pacman -Syy --noconfirm archlinux-keyring pacman-mirrorlist athena-keyring athena-mirrorlist blackarch-keyring blackarch-mirrorlist chaotic-keyring chaotic-mirrorlist
 
       - name: Install dependencies
-        run: pacman -Syyu --noconfirm archiso git openssh rsync sshpass wget
+        run: pacman -Syyu --noconfirm archiso git github-cli openssh rsync sshpass wget
           
       - name: Retrieve Athena ISO
         run: git clone https://github.com/Athena-OS/athena-iso
