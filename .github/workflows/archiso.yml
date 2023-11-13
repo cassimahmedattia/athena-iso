@@ -57,14 +57,11 @@ jobs:
           sed -i "/mirror.netcologne.de/d" /etc/pacman.d/mirrorlist
 
       - name: Install dependencies
-        run: pacman -Syyu --noconfirm archiso git github-cli openssh rsync sshpass wget
-          
-      - name: Retrieve Athena ISO
-        run: git clone https://github.com/Athena-OS/athena-iso
+        run: pacman -Syyu --noconfirm archiso github-cli openssh rsync sshpass wget
         
       - name: Build ArchISO
         run: |
-          cd athena-iso/installation-scripts
+          cd installation-scripts
           ./30-build-the-iso-the-first-time.sh
           
       - name: Upload to SourceForge
@@ -75,6 +72,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          cd $GITHUB_WORKSPACE
           for f in $(find $HOME/Athena-Out -name '*.iso*'); do
             gh release upload v23.06.23 $f
           done
