@@ -49,6 +49,17 @@ jobs:
 
       - name: Install dependencies
         run: pacman -Syyu --noconfirm archiso git github-cli openssh rsync sshpass wget
+
+      - name: Upload to GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p $HOME/Athena-Out
+          touch $HOME/Athena-Out/test.iso.sha256
+          for f in $(find $HOME/Athena-Out -name '*.iso*'); do
+            echo "$f"
+            gh release upload v23.06.23 $f
+          done
           
       - name: Retrieve Athena ISO
         run: git clone https://github.com/Athena-OS/athena-iso
