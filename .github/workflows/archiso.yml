@@ -22,8 +22,9 @@ jobs:
       - name: Upload to GitHub Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run:
+        run: |
           ls $HOME
+          echo "$HOME"
           ls athena-iso
           for f in $(find athena-iso/ -name '*.md*'); do
             gh release upload v23.06.23 $f
