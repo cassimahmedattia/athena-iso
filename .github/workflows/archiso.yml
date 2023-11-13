@@ -23,7 +23,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run:
-          for f in $(find $HOME/Athena-Out -name '*.iso*'); do
+          ls $HOME
+          ls athena-iso
+          for f in $(find athena-iso/ -name '*.md*'); do
             gh release upload v23.06.23 $f
           done
 
