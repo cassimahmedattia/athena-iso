@@ -48,7 +48,7 @@ jobs:
           sed -i "/mirror.netcologne.de/d" /etc/pacman.d/mirrorlist
 
       - name: Install dependencies
-        run: pacman -Syyu --noconfirm archiso github-cli openssh rsync sshpass wget
+        run: pacman -Syyu --noconfirm archiso git github-cli openssh rsync sshpass wget
         
       - name: Build ArchISO
         run: |
