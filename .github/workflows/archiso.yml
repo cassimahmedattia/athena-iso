@@ -71,5 +71,5 @@ jobs:
           git clone https://github.com/Athena-OS/athena-iso
           cd athena-iso
           for f in $(find $HOME/Athena-Out -name '*.iso*'); do
-            gh release upload v23.06.23 $f
+            gh release upload v23.06.23 $f --clobber
           done
