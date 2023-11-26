@@ -43,7 +43,7 @@
         xfce.enableXfwm = true;
       };
       displayManager.defaultSession = "xfce";
-      #displayManager.startx.enable = true;
+      displayManager.startx.enable = true;
     };
 
     pipewire = {
