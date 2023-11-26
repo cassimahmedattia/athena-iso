@@ -21,7 +21,7 @@
 
   services = {
     # Autologin by startx
-    getty.autologinUser = "athena";
+    getty.autologinUser = "nixos";
 
     timesyncd = {
       # feel free to change to sth around your location
