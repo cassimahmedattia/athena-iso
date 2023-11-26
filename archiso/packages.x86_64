@@ -82,6 +82,7 @@ paru
 polkit
 reflector
 ufw
+vnstat
 wget
 which
 xclip
