@@ -330,7 +330,7 @@
      #microcodeIntel ./hardware/cpu/intel-microcode.nix
      #linux-firmware ./hardware/all-firmware.nix
      #lvm2 ./tasks/lvm.nix
-     mesa
+     #mesa ./hardware/opengl.nix
      mkinitcpio-nfs-utils
      #mtools profiles/base.nix
      #nano ./programs/nano.nix
