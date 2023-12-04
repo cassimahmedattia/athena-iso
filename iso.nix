@@ -157,54 +157,54 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     microcodeAmd
-     btrfs-progs
-     dhcpcd
+     #microcodeAmd ./hardware/cpu/amd-microcode.nix
+     #btrfs-progs ./tasks/filesystems/btrfs.nix
+     #dhcpcd ./services/networking/dhcpcd.nix
      dialog
      dosfstools
      edk2-uefi-shell
-     efibootmgr
-     grub2
+     #efibootmgr profiles/base.nix
+     #grub2 ./system/boot/loader/grub/grub.nix
      inetutils
-     microcodeIntel
-     linux-firmware
-     lvm2
+     #microcodeIntel ./hardware/cpu/intel-microcode.nix
+     #linux-firmware ./hardware/all-firmware.nix
+     #lvm2 ./tasks/lvm.nix
      mesa
      mkinitcpio-nfs-utils
-     mtools
-     nano
+     #mtools profiles/base.nix
+     #nano ./programs/nano.nix
      nettools
-     networkmanager
+     #networkmanager ./services/networking/networkmanager.nix
      networkmanagerapplet
-     nfs-utils
-     nssmdns
-     ntfs3g
-     #ntp
-     os-prober
+     #nfs-utils ./tasks/filesystems/nfs.nix
+     #nssmdns ./config/nsswitch.nix
+     #ntfs3g tasks/filesystems/ntfs.nix
+     ##ntp ./services/networking/ntp/ntpd.nix
+     #os-prober ./system/boot/loader/grub/grub.nix
      pavucontrol
-     #pipewire
+     #pipewire ./services/desktops/pipewire/pipewire.nix
      pv
-     rsync
-     sof-firmware
-     squashfs-tools-ng
-     #sudo
-     testdisk
-     usbutils
+     #rsync ./services/network-filesystems/rsyncd.nix
+     #sof-firmware ./hardware/all-firmware.nix
+     #squashfs-tools-ng ./tasks/filesystems/squashfs.nix
+     #sudo ./security/sudo.nix
+     #testdisk profiles/base.nix
+     #usbutils profiles/base.nix
      wirelesstools
-     wireplumber
-     wpa_supplicant
-     xfsprogs
-     noto-fonts
-     noto-fonts-emoji
+     #wireplumber ./services/desktops/pipewire/wireplumber.nix
+     #wpa_supplicant ./services/networking/wpa_supplicant.nix
+     #xfsprogs ./tasks/filesystems/xfs.nix
+     #noto-fonts ./config/fonts/packages.nix has noto-fonts-color-emoji
+     #noto-fonts-emoji ./config/fonts/packages.nix has noto-fonts-color-emoji
      bat
      espeakup
-     git
+     #git ./programs/git.nix
      gparted
      lsd
      netcat-openbsd
      orca
-     polkit
-     vnstat
+     #polkit ./security/polkit.nix
+     #vnstat ./services/monitoring/vnstat.nix
      wget
      which
      xclip
