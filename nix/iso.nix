@@ -1,7 +1,7 @@
 { pkgs, lib, ... }: {
 
   imports = [
-    ./installation-cd-base.nix
+    ./installation-cd-graphical-xfce.nix
   ];
 
   boot = {
@@ -25,9 +25,6 @@
   };
 
   services = {
-    # Autologin by startx
-    getty.autologinUser = "athena";
-
     timesyncd = {
       # feel free to change to sth around your location
       # servers = ["pl.pool.ntp.org"];
@@ -36,32 +33,6 @@
 
     printing.enable = true;
     vnstat.enable = true;
-
-    xserver = {
-      enable = true;
-      autorun = false;
-      layout = "us";
-      xkbVariant = "";
-      libinput.enable = true;
-      desktopManager = {
-        xfce.enable = true;
-        xfce.enableXfwm = true;
-      };
-      displayManager = {
-        defaultSession = "xfce";
-        startx.enable = true;
-        autoLogin = {
-          enable = true;
-          user = "athena";
-        };
-      };
-    };
-
-    pipewire = {
-      enable = true;
-      pulse.enable = true;
-      wireplumber.enable = true;
-    };
 
     avahi = {
       enable = true;
@@ -77,32 +48,16 @@
         interface = [];
       };
     };
-    
-    # using VPN is generally a good idea
-    # use Mullvad btw
-    # mullvad-vpn.enable = true;
 
     hardware = {
       bolt.enable = true;
     };
-
-    spice-vdagentd.enable = true;
-    qemuGuest.enable = true;
   };
-
-  #virtualisation.docker.enable = true;
-
-  virtualisation.vmware.guest.enable = true;
-  virtualisation.hypervGuest.enable = true;
-  virtualisation.virtualbox.guest.enable = false;
 
   networking = {
     hostName = "AthenaOS";
     dhcpcd.enable = true;
-    networkmanager = {
-        enable = true;
-        dhcp = "dhcpcd";
-    };
+    networkmanager.dhcp = "dhcpcd";
     firewall = {
       #allowedTCPPorts = [22 80];
       #allowPing = false;
@@ -111,17 +66,6 @@
       logReversePathDrops = true;
       # trustedInterfaces = [ "" ];
     };
-  };
-
-  security = {
-    # apparmor.enable = true;
-    # lockKernelModules = true;
-    #auditd.enable = true;
-    #audit = {
-    #  enable = true;
-    #  rules = ["-a exit, always -F arch=b64 -s execve"];
-    #};
-    polkit.enable = true;
   };
 
   #time.timeZone = "UTC"; # change to your one
@@ -166,7 +110,6 @@
   #   nettools
   #   networkmanagerapplet
   #   ##nfs-utils ./tasks/filesystems/nfs.nix
-  #   ##nssmdns ./config/nsswitch.nix
   #   ##ntp ./services/networking/ntp/ntpd.nix
   #   pavucontrol
   #   pv
