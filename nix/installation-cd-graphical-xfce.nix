@@ -11,6 +11,7 @@
   services.xserver = {
     desktopManager = {
       xfce.enable = true;
+      xfce.enableScreensaver = false;
       xfce.enableXfwm = true;
     };
     displayManager = {
