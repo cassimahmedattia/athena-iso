@@ -99,7 +99,7 @@ chaotic-mirrorlist
 ###                    BLACKARCH                    ###
 #######################################################
 
-blackarch-keyring
+#blackarch-keyring
 blackarch-mirrorlist
 
 #######################################################
