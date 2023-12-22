@@ -100,7 +100,7 @@ chaotic-mirrorlist
 #######################################################
 
 #blackarch-keyring
-blackarch-mirrorlist
+#blackarch-mirrorlist
 
 #######################################################
 ###                ATHENA REPOSITORY                ###
